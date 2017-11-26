@@ -1,0 +1,147 @@
+
+% see http://www.tex.ac.uk/cgi-bin/texfaq2html?label=noroom
+\documentclass[a4paper,oneside]{book}
+\input{../Mod_base/base}
+\geometry{top=1.5cm,bottom=1.5cm}
+\input{../Mod_base/grafica}
+\input{../Mod_base/rifIndici}
+\input{../Mod_base/stand_class}
+
+\input{../Mod_base/matematica}
+\input{../Mod_base/tabelle}
+%\input{impostazioni/impostazioniTikz}
+\DeclareCaptionFormat{grafico}{\textbf{Grafico \thefigure}#2#3}
+\DeclareCaptionFormat{esempio}{\textbf{Esempio \thefigure}#2#3}
+\newcolumntype{L}{>{$\displaystyle}l<{$}}
+\newcolumntype{C}{>{$\displaystyle}c<{$}}
+\newcolumntype{R}{>{$\displaystyle}r<{$}}
+\newcolumntype{W}{>{\sffamily\Large $}c<{$}}
+\makeindex[options=-s ../Mod_base/oldclaudio.sti]
+\input{../Mod_base/pagina}
+\input{../Mod_base/date}
+\input{../Mod_base/loghi}
+\input{../Mod_base/unita_misura}
+\input{../Mod_base/tcolorboxgest}
+\input{../Mod_base/glossario}
+\newglossary[slg]{symbolslist}{sym}{sbl}{Elenco di simboli}
+
+\makeglossaries
+\loadglsentries{glossario/glossari4}
+\loadglsentries[altacronym]{glossario/acronimi1}
+\loadglsentries[acronym]{glossario/simboli1}
+
+\newcommand{\tabincludestandalone}[2][]{%
+	$\vcenter{\hbox{\includestandalone[#1]{#2}}}$}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\makeatletter
+\renewcommand\frontmatter{%
+	\cleardoublepage
+	\@mainmatterfalse
+	\pagenumbering{arabic}}
+\renewcommand\mainmatter{%
+	\cleardoublepage
+	\@mainmattertrue}
+\makeatother
+\input{../Mod_base/indice}
+\input{../Mod_base/utili}
+\usepackage{hyperxmp}
+\usepackage{hyperref}
+\title{Appunti di Matematica}
+\author{Claudio Duchi}
+\date{\datetime}
+\usepackage{tkz-berge}
+\newcommand{\polylogo}[1]{
+\begin{center}
+			\begin{tikzpicture}
+	\renewcommand*{\VertexBallColor}{green!50!black}
+	\GraphInit[vstyle=Art]
+	\grComplete[RA=6]{#1}
+	\end{tikzpicture}
+\end{center}
+}
+\hypersetup{%
+	pdfencoding=auto,
+	urlcolor={blue},
+	pdftitle={Appunti di matematica },
+	pdfsubject={Appunti quinto},
+	pdfstartview={FitH},
+	pdfpagemode={UseOutlines},
+	pdflicenseurl={http://creativecommons.org/licenses/by-nc-nd/3.0/},
+	pdflang={it},
+	pdfmetalang={it},
+	pdfkeywords={Analisi},
+	pdfcopyright={Copyright (C) 2017, Claudio Duchi},
+	pdfcontacturl={http://breviariomatematico.altervista.org},
+	pdfcontactpostcode={},
+	pdfcontactphone={},
+	pdfcontactemail={claduc},
+	pdfcontactcountry={Italy},
+	pdfcontactcity={Perugia},
+	pdfcontactaddress={},
+	pdfcaptionwriter={Claudio Duchi},
+	pdfauthortitle={},%
+	pdfauthor={Claudio Duchi},
+	linkcolor={blue},
+	colorlinks=true,
+	citecolor={red},
+	breaklinks,
+	bookmarksopen,
+	verbose,
+	baseurl={http://breviariomatematico.altervista.org}
+}
+\input{compilaTexStudio}
+\listfiles
+\begin{document}
+\frontmatter
+\begin{titlepage}
+	
+	\begin{center}
+		
+		
+		% Upper part of the page
+			%\includestandalone{../Mod_base/Lgrande2}\\[1cm]    
+			
+		\includegraphics{../Mod_base/Lgrande2}\\[1cm]    
+		\textsc{\LARGE Claudio Duchi}\\[1.5cm]
+		
+		%\textsc{\Large Final year project}\\[0.5cm]
+		
+		
+		% Title
+		\HRule \\[0.4cm]
+		{ \huge \bfseries Appunti di matematica}\\[0.4cm]
+		{\bfseries QUINTO}\\[0.4cm]
+		\vfill
+				% Bottom of the page
+			\polylogo{15}		
+		{\large $-$\DTMnow$-$}
+		\end{center}
+
+	\end{titlepage}
+\setcounter{page}{2}
+\hypersetup{pageanchor=true}
+\input{../Mod_base/copyright}
+\tableofcontents 
+\cleardoublepage
+\listoftables
+\addcontentsline{toc}{chapter}{\listtablename}
+\cleardoublepage
+\listoffigures
+\addcontentsline{toc}{chapter}{\listfigurename}
+\cleardoublepage\renewcommand\lstlistlistingname{Elenco esempi}
+\addcontentsline{toc}{chapter}{\lstlistlistingname}
+\addcontentsline{toc}{section}{Esempi}
+\lstlistoflistings{}
+\tcblistof[\section*]{thm}{Esempi}
+\addcontentsline{toc}{section}{Contro esempi}
+\tcblistof[\section*]{cthm}{Contro esempi}
+ \listoftodos
+\mainmatter%
+\input{compilaTexStudioDue}	
+\glsaddall
+\printglossaries
+\addcontentsline{toc}{chapter}{\indexname}
+\input{../Mod_base/MezziUsati}
+\printindex
+\end{document}

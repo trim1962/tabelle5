@@ -1,0 +1,94 @@
+\tikzset{every picture/.style={scale=0.3,every picture/.style={}}}
+\tikzset{main base/.style={draw,thick,text centered, }, }
+\tikzset{main node/.style={rectangle, draw,rounded corners,main base}, }
+%      
+%\tikzset{main verb/.style={minimum size=1cm}, }
+%\tikzset{linea/.style={-triangle 90}, }
+%\tikzset{main node2/.style={rectangle, draw,thick,
+%    text width=7em, text centered, rounded corners, minimum height=3em}, }
+\tikzset{main node2/.style={main node,
+    text width=7em, minimum height=3em}, }
+\tikzset{main verb/.style={minimum size=1cm}, }
+\tikzset{linea/.style={-triangle 90,thick,draw}}
+%\tikzset{linea/.style={-triangle 90,thick,draw}}
+\tikzset{linea2/.style={-triangle 90,draw}}
+\tikzset{primo/.style={circle,draw,inner sep=0pt,minimum size=1pt,thick}, }
+\tikzset{
+    start-end/.style={
+        draw,
+        rectangle,
+        rounded corners,main base,
+    } ,
+    input/.style={ % requires library shapes.geometric
+        draw,
+        trapezium,
+        trapezium left angle=60,
+        trapezium right angle=120,main base
+    },
+    operation/.style={
+        draw,thick,
+        rectangle,main base,
+    },
+    loop/.style={ % requires library shapes.misc
+        draw,
+        chamfered rectangle,
+        chamfered rectangle xsep=2cm
+    },
+    decision/.style={ % requires library shapes.geometric
+        draw,
+        diamond,
+        aspect=#1,main base
+    },
+    decision/.default=1,
+    print/.style={ % requires library shapes.symbols
+        draw,
+        tape,
+        tape bend top=none
+    },
+    connection/.style={
+        draw,
+        circle,
+        radius=5pt,
+    },
+    process rectangle outer width/.initial=0.15cm,
+    predefined process/.style={
+        rectangle,
+        draw,
+        append after command={
+        \pgfextra{
+          \draw
+          ($(\tikzlastnode.north west)-(0,0.5\pgflinewidth)$)--
+          ($(\tikzlastnode.north west)-(\pgfkeysvalueof{/tikz/process rectangle outer width},0.5\pgflinewidth)$)--
+          ($(\tikzlastnode.south west)+(-\pgfkeysvalueof{/tikz/process rectangle outer width},+0.5\pgflinewidth)$)--
+          ($(\tikzlastnode.south west)+(0,0.5\pgflinewidth)$);
+          \draw
+          ($(\tikzlastnode.north east)-(0,0.5\pgflinewidth)$)--
+          ($(\tikzlastnode.north east)+(\pgfkeysvalueof{/tikz/process rectangle outer width},-0.5\pgflinewidth)$)--
+          ($(\tikzlastnode.south east)+(\pgfkeysvalueof{/tikz/process rectangle outer width},0.5\pgflinewidth)$)--
+          ($(\tikzlastnode.south east)+(0,0.5\pgflinewidth)$);
+        }  
+        },
+        text width=#1,
+        align=center
+    },
+    predefined process/.default=1.75cm,
+    man op/.style={ % requires library shapes.geometric
+        draw,
+        trapezium,
+        shape border rotate=180,
+        text width=2cm,
+        align=center,
+    },
+    extract/.style={
+        draw,
+        isosceles triangle,
+        isosceles triangle apex angle=60,
+        shape border rotate=90
+    },
+    merge/.style={
+        draw,
+        isosceles triangle,
+        isosceles triangle apex angle=60,
+        shape border rotate=-90
+    },
+}
