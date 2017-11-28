@@ -1,0 +1,22 @@
+\documentclass[10pt]{standalone}
+
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw[->] (-2.,0.) -- (2.,0.);
+\foreach \x in {-2.,-1.,1.}
+\draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->] (0.,-1.5) -- (0.,1.5) node[left] {\footnotesize $\y$};
+% 28/11/2017 :: 10:39:52 :: \foreach \y in {-1.,1.}
+% 28/11/2017 :: 10:38:18 :: \draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw (-2.,-1) -- (0.,-1);
+\draw (2.,1) -- (0.,1);
+\draw (0,-1) node[right] {\footnotesize $-1$};
+\draw (0,1) node[left] {\footnotesize $+1$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-2.,-1.5) rectangle (2.,1.5);
+\end{tikzpicture}
+\end{document}
