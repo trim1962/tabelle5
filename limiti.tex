@@ -14,12 +14,22 @@ f(x)	&3.7  & 3.97 &3.997 & & 4.003 & 4.03 & 4.3 \\
 \bottomrule
 \end{tabular}\captionof{table}{Limite finito per x che tende a valori finito}
 \end{center}
-Guardando la tabella, si nota che per valori di $x$ prossimi a uno la funzione assume valori prossimi al quattro. Dalla tabella risulta che la differenza tra il valore della funzione e il quattro può essere resa piccola a piacere. Quanto più piccola si vuole la differenza tra la funzione e il numero esiste un intorno del punto dell'uno per cui preso un valore appartenente a questo intorno, la differenza è minore di quanto fissato. Se succede questo si dice che \[\lim_{x\to 1}3x+1=4 \]
+Guardando la tabella, si nota che per valori di $x$ prossimi a uno la funzione assume valori vicini al numero quattro. Dalla tabella risulta che la differenza tra il valore della funzione e il quattro può essere resa piccola a piacere.\par Quanto più piccola è la differenza tra la funzione e il numero esiste un intorno del punto dell'uno per cui preso un valore appartenente a questo intorno, la differenza, fra la funzione e il 4,  è minore di quanto fissato. 
+
+Se succede questo si dice che \[\lim_{x\to 1}3x+1=4 \]
 In generale \[ \forall \epsilon>0\; \exists\; \delta_\epsilon>0 \; |\; \forall x \; 0<\abs{x-x_0}<\delta \Rightarrow \abs{f(x)-l}<\epsilon \]
  \[\lim_{x\to x_0}f(x)=l \]
  \section{Limite sinistro e limite destro}
- Per spiegare il concetto usiamo la seguente funzione\index{Funzione!segno} segno\[f(x)=\dfrac{\abs{x}}{x}\]Questa funzione vale \[ f(x)=\begin{cases}
+ Per spiegare il concetto usiamo la seguente funzione funzione vale \[ f(x)=\begin{cases}
  +1&x>0\\
  -1&x<0\\
- \text{Indefinita}&x=0
+ 0&x=0
  \end{cases}\]
+ Il grafico della funzione è il seguente
+  \begin{center}
+ 	\includestandalone{grafici/FunzioneSegno}
+ 	\captionof{figure}{Funzione segno}
+ \end{center}\index{Funzione!segno}
+il limite per  x che tende a zero di questa funzione non esiste. Ma esistono \[\lim_{x\to 0^+}f(x)=1 \]
+e \[\lim_{x\to 0^-}f(x)=-1 \]
+\section{Limite infinito per x che tende a valore finito}
