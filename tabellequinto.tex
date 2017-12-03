@@ -22,13 +22,13 @@
 \input{../Mod_base/loghi}
 \input{../Mod_base/unita_misura}
 \input{../Mod_base/tcolorboxgest}
-\input{../Mod_base/glossario}
-\newglossary[slg]{symbolslist}{sym}{sbl}{Elenco di simboli}
-
-\makeglossaries
-\loadglsentries{glossario/glossari4}
-\loadglsentries[altacronym]{glossario/acronimi1}
-\loadglsentries[acronym]{glossario/simboli1}
+%\input{../Mod_base/glossario}
+%\newglossary[slg]{symbolslist}{sym}{sbl}{Elenco di simboli}
+%
+%\makeglossaries
+%\loadglsentries{glossario/glossari4}
+%\loadglsentries[altacronym]{glossario/acronimi1}
+%\loadglsentries[acronym]{glossario/simboli1}
 
 \newcommand{\tabincludestandalone}[2][]{%
 	$\vcenter{\hbox{\includestandalone[#1]{#2}}}$}
@@ -139,8 +139,8 @@
  \listoftodos
 \mainmatter%
 \input{compilaTexStudioDue}	
-\glsaddall
-\printglossaries
+%\glsaddall
+%\printglossaries
 \addcontentsline{toc}{chapter}{\indexname}
 \input{../Mod_base/MezziUsati}
 \printindex

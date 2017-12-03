@@ -1,9 +1,11 @@
+% !TeX spellcheck = it_IT
+% !TeX encoding = UTF-8
+% !TeX root = tabellequinto.tex
 \chapter{Limiti}
 \section{Limite finito per x che tende a valore finito}
-Supponiamo di avere una funzione $\funzione{f}{\R}{\R}$ definita \[f(x)=3x+1\] Costruiamo la seguente tabella della funzione per valori di $x$ prossimi ad uno.
+Supponiamo di avere una funzione $\funzione{f}{D}{\R}$ definita \[f(x)=3x+1\] Dove $D$ è il suo dominio. Costruiamo la seguente tabella della funzione per valori di $x$ prossimi ad uno.
 \begin{center}
-	
-\begin{tabular}{@{}Lccccccc}
+\begin{tabular}{@{}L*{7}{c}}
 	\toprule
 &&	\multicolumn{2}{R}{\longrightarrow}&&\multicolumn{2}{L}{\longleftarrow}\\
 x	& 0.9 & 0.99 & 0.999&1 &1.001  &1.01  & 1.1 \\
@@ -14,11 +16,19 @@ f(x)	&3.7  & 3.97 &3.997 & & 4.003 & 4.03 & 4.3 \\
 \bottomrule
 \end{tabular}\captionof{table}{Limite finito per x che tende a valori finito}
 \end{center}
-Guardando la tabella, si nota che per valori di $x$ prossimi a uno la funzione assume valori vicini al numero quattro. Dalla tabella risulta che la differenza tra il valore della funzione e il quattro può essere resa piccola a piacere.\par Quanto più piccola è la differenza tra la funzione e il numero esiste un intorno del punto dell'uno per cui preso un valore appartenente a questo intorno, la differenza, fra la funzione e il 4,  è minore di quanto fissato. 
+Guardando la tabella, si nota che per valori di $x$ prossimi a uno la funzione assume valori vicini al numero quattro. Dalla tabella risulta che la differenza tra il valore della funzione e il quattro può essere resa piccola a piacere.\par Quanto più piccola è questa differenza fissata tra la funzione e il numero, esiste un intorno dell'uno per cui, preso un valore appartenente a questo intorno, la differenza fra la funzione e il 4,  è minore di quanto fissato. 
 
 Se succede questo si dice che \[\lim_{x\to 1}3x+1=4 \]
-In generale \[ \forall \epsilon>0\; \exists\; \delta_\epsilon>0 \; |\; \forall x \; 0<\abs{x-x_0}<\delta \Rightarrow \abs{f(x)-l}<\epsilon \]
- \[\lim_{x\to x_0}f(x)=l \]
+
+\begin{equation*}
+\forall\; I(4)\; \exists\; I(1) : \forall x\in I(1)-\lbrace 1\rbrace \longrightarrow f(x)\in I(4)
+\end{equation*}
+In generale \begin{equation*}
+\lim_{x\to x_0}f(x)=l
+\end{equation*}
+\begin{equation*}
+\forall\; I(l)\; \exists\; I(x_0) : \forall x\in I(x_0)-\lbrace x_0\rbrace \longrightarrow f(x)\in I(l)
+\end{equation*}
  \section{Limite sinistro e limite destro}
  Per spiegare il concetto usiamo la seguente funzione funzione vale \[ f(x)=\begin{cases}
  +1&x>0\\
@@ -33,3 +43,54 @@ In generale \[ \forall \epsilon>0\; \exists\; \delta_\epsilon>0 \; |\; \forall x
 il limite per  x che tende a zero di questa funzione non esiste. Ma esistono \[\lim_{x\to 0^+}f(x)=1 \]
 e \[\lim_{x\to 0^-}f(x)=-1 \]
 \section{Limite infinito per x che tende a valore finito}
+Supponiamo di avere una funzione $\funzione{f}{D}{\R}$ definita \[f(x)=\dfrac{1}{x^2}\]Dove $D$ è il suo dominio. Costruiamo la seguente tabella della funzione per valori di $x$ prossimi a zero.
+\begin{center}
+	\begin{tabular}{@{}L*{13}{c}}
+		\toprule
+		&&&&&	\multicolumn{2}{R}{\longrightarrow}&&\multicolumn{2}{L}{\longleftarrow}\\
+		x& -1 & -0.9 & -0.5&-0.2&-0.1&-0.01&0&0.01&0.1&0.2&0.5&0.9&1 \\
+		\cmidrule(r){2-14} 
+	f(x)	&1&1.12&4&25&100&10000&&10000&100&25&4&0.12&1\\
+		\bottomrule
+	\end{tabular}\captionof{table}{Limite infinito per x che tende a valore finito}
+\end{center}
+Per valori prossimi allo zero la funzione assume valori sempre maggiori. Possiamo dire che valori prossimi allo zero, comunque fissiamo un valore $M>0$ esiste un intorno dello zero $I(0)$ tale comunque preso $x$ appartenente a questo intorno, escluso lo zero, $f(x)>M$
+
+Se succede questo si dice che \[\lim_{x\to 0}\dfrac{1}{x^2}=\infty \]
+\begin{equation*}
+\forall\; I(\infty)=(M,\infty)\; \exists\; I(0) : \forall x\in I(0)-\lbrace 0\rbrace \longrightarrow f(x)\in I(\infty)
+\end{equation*}
+In generale \begin{equation*}
+\lim_{x\to x_0}f(x)=\infty
+\end{equation*}
+\begin{equation*}
+\forall\; I(\infty)\; \exists\; I(x_0) : \forall x\in I(x_0)-\lbrace x_0\rbrace \longrightarrow f(x)\in I(\infty)
+\end{equation*}
+\section{Limite finito per x che tende a valore infinito}
+Supponiamo di avere una funzione $\funzione{f}{D}{\R}$ definita \[f(x)=\dfrac{3x-2}{x+4}\] Dove $D$ è il suo dominio.
+Costruiamo la seguente tabella per valori di x crescenti.
+\begin{center}
+	\begin{tabular}{@{}L*{6}{c}}
+		\toprule&
+			\multicolumn{2}{L}{\longrightarrow}&&\multicolumn{1}{L}{\longrightarrow}\\
+		x& 1 & 10 &100&1000&10000&100000\\
+		\cmidrule(r){2-7} 
+	f(x)	&0.2&2&2.7&2.98&2.99&2.9998\\
+	\cmidrule(r){2-7} 
+	\abs{3-f(x)}&2.8&1&0.3&0.02&0.01&0.0002\\
+		\bottomrule
+	\end{tabular}\captionof{table}{Limite finito per x che tende a  infinito}
+\end{center}
+All'aumentare dei valori di $x$ la funzione sempre più prossima a quattro. Inoltre per quanto possa essere piccola la differenza tra la funzione e il valore limite è possibile trovare un valore di x per cui questa differenza è ancora minore.
+Per ogni intorno di tre esiste un intorno dell'infinto tale che per ogni valore di questo intorno $f(x)$ appartiene all'intorno del tre.
+Se succede questo si dice che \[\lim_{x\to \infty}\dfrac{3x-2}{x+4}=3 \] 
+
+\begin{equation*}
+\forall\; I(3)\; \exists\; I(\infty) : \forall x\in I(\infty) \longrightarrow f(x)\in I(3)
+\end{equation*}
+In generale \begin{equation*}
+\lim_{x\to \infty}f(x)=l
+\end{equation*}
+\begin{equation*}
+\forall\; I(l)\; \exists\; I(\infty) : \forall x\in I(\infty) \longrightarrow f(x)\in I(l)
+\end{equation*}
