@@ -1,0 +1,57 @@
+\chapter{Limiti di funzioni razionali}
+\section{Forma indeterminata infinito su infinito}
+Supponiamo di avere una funzione razionale fratta
+\begin{esempiot}{Forma indeterminata infinito su infinito}{}
+	\[f(x)=\dfrac{x^2+2x+1}{2x^3+3x+1} \]
+\end{esempiot}
+Il limite
+\[\lim_{x\to \infty}\dfrac{x^2+2x+1}{2x^3+3x+1}=\dfrac{\infty}{\infty}\]
+è una forma indeterminata che risolvo nel seguente modo
+\begin{align*}\index{Forma!indeterminata!infinito su infinito}
+\lim_{x\to \infty}\dfrac{x^2+2x+1}{2x^3+3x+1}=&\\
+=&\lim_{x\to \infty}\dfrac{x^2(1+\dfrac{2}{x}+\dfrac{1}{x^2})}{x^3(2+\dfrac{3}{x^2}+\dfrac{1}{x^3})}
+\intertext{I termini dentro alla parentesi al numeratore valgono uno mentre i termini al denominatore valgono due ottengo}
+=&\lim_{x\to \infty}\dfrac{x^2\cdot 1}{x^3\cdot 2}\\
+=&\lim_{x\to \infty}\dfrac{1}{2}\cdot\dfrac{1}{x}=0
+\end{align*}
+quindi la forma indeterminata è risolta.
+\section{Forma indeterminata zero su zero}
+Consideriamo la funzione 
+\begin{esempiot}{Forma indeterminata zero su zero}{}
+\[f(x)=\dfrac{3x^2-4x-4}{5x^2-8x-4} \]
+\end{esempiot}
+se calcoliamo il limite\[\lim_{x\to 2}\dfrac{3x^2-4x-4}{5x^2-8x-4} \]
+\begin{align*}\index{Forma!indeterminata!zero su zero}
+\lim_{x\to 2}\dfrac{3x^2-4x-4}{5x^2-8x-4}=&\\
+=&\lim_{x\to 2}\dfrac{12-8-4}{20-16-4}\\
+=&\dfrac{0}{0}\\
+\end{align*}
+Dato che il numeratore e  denominatore sono due polinomi di secondo grado possiamo utilizzare 
+\[ax^2+bx+c=a(x-x_1)(x-x_2) \] dove $x_1$ e $x_2$ solo le soluzioni di \[ ax^2+bx+c=0\]
+quindi \begin{align*}
+3x^2-4x-4=&0\\
+x_{1,2}=&\dfrac{4\pm\sqrt{64}}{6}\\
+=&\begin{cases}
+x_1=\dfrac{4+8}{6}=2\\
+x_2=\dfrac{4-8}{6}=-\dfrac{2}{3}
+\end{cases}
+\intertext{quindi}
+3x^2-4x-4=&3(x-2)(x+\dfrac{2}{3})
+\intertext{resta}
+5x^2-8x-4=&0\\
+x_{1,2}=&\dfrac{8\pm\sqrt{144}}{10}\\
+=&\begin{cases}
+x_1=\dfrac{8+12}{10}=2\\
+x_2=\dfrac{8-12}{10}=-\dfrac{2}{5}
+\end{cases}
+\intertext{quindi}
+5x^2-8x-4=&5(x-2)(x+\dfrac{2}{5})
+\end{align*}
+Utilizzando i risultati precedenti otteniamo
+\begin{align*}
+\lim_{x\to 2}\dfrac{3x^2-4x-4}{5x^2-8x-4}=&\\
+=&\lim_{x\to 2}\dfrac{3(x-2)(x+\dfrac{2}{3})}{5(x-2)(x+\dfrac{2}{5})}\\
+\intertext{semplificando}
+=&\lim_{x\to 2}\dfrac{3(x+\dfrac{2}{3})}{5(x+\dfrac{2}{5})}\\
+=&\lim_{x\to 2}\dfrac{3x+2}{5x+2}=\dfrac{8}{12}=\dfrac{2}{3}\\
+\end{align*}

@@ -1,6 +1,6 @@
 
 % see http://www.tex.ac.uk/cgi-bin/texfaq2html?label=noroom
-\documentclass[a4paper,oneside]{book}
+\documentclass[openany]{book}%
 \input{../Mod_base/base}
 \geometry{top=1.5cm,bottom=1.5cm}
 \input{../Mod_base/grafica}
@@ -29,7 +29,11 @@
 %\loadglsentries{glossario/glossari4}
 %\loadglsentries[altacronym]{glossario/acronimi1}
 %\loadglsentries[acronym]{glossario/simboli1}
+\usepackage[toc,page]{appendix}
 
+\renewcommand{\appendixtocname}{Appendice}
+
+\renewcommand{\appendixpagename}{Appendice}
 \newcommand{\tabincludestandalone}[2][]{%
 	$\vcenter{\hbox{\includestandalone[#1]{#2}}}$}
 
@@ -71,7 +75,7 @@
 	pdflang={it},
 	pdfmetalang={it},
 	pdfkeywords={Analisi},
-	pdfcopyright={Copyright (C) 2017, Claudio Duchi},
+	pdfcopyright={Copyright (C) 2018, Claudio Duchi},
 	pdfcontacturl={http://breviariomatematico.altervista.org},
 	pdfcontactpostcode={},
 	pdfcontactphone={},
@@ -144,6 +148,8 @@
 %\glsaddall
 %\printglossaries
 \addcontentsline{toc}{chapter}{\indexname}
-\input{../Mod_base/MezziUsati}
+\begin{appendices}
+	\input{../Mod_base/MezziUsati}
+\end{appendices}
 \printindex
 \end{document}
