@@ -1,8 +1,10 @@
 \chapter{Asintoti}
-Un asintoto è una retta che, in maniera semplice, a cui si avvicina una curva senza mai toccarla. vi sono tre tipi di asintoti. 
+Un asintoto è una retta che, in maniera semplice, a cui si avvicina una curva senza mai toccarla. Vi sono tre tipi di asintoti. 
 \section{Asintoti verticali}
-Gli asintoti verticali, per una funzione razionale fratta, sono legati ai valori del dominio. L'asintoto ha equazione \[ x=k\].
-Iniziamo con un esempio per determinare un asintoto verticale\index{Asintoto!verticale} 
+Gli asintoti verticali, per una funzione razionale fratta, sono legati ai valori del dominio.
+Una funzione ha un asintoto verticale se 
+\[\lim_{x\to k}f(x)=\infty\]
+L'asintoto ha equazione \[ x=k\]Iniziamo con un esempio per determinare un asintoto verticale\index{Asintoto!verticale} 
 consideriamo la funzione 
 \begin{esempiot}{Asintoto verticale}{}
 \[f(x)=\dfrac{x^2-x-6}{x^2+x-6} \]
@@ -18,3 +20,153 @@ x_2=2
 \end{cases}
 \end{align*}
 Quindi il dominio della funzione è $\R-\lbrace2,-3\rbrace$ Abbiamo due candidati per gli asintoti verticali.
+Calcolo il limite \[ \lim_{x\to 2}\dfrac{x^2-x-6}{x^2+x-6}=\dfrac{-4}{0}=\infty\] Valutiamo i limiti destro e sinistro. 
+\begin{align*}
+\lim_{x\to 2^+}\dfrac{x^2-x-6}{x^2+x-6}=&\\
+\intertext{dato che}
+4^+-2^+-6<&0\\
+4^++2^+-6>&0\\
+\lim_{x\to 2^+}\dfrac{x^2-x-6}{x^2+x-6}=&-\infty\\
+\end{align*}
+\begin{align*}
+\lim_{x\to 2^-}\dfrac{x^2-x-6}{x^2+x-6}=&\\
+\intertext{dato che}
+4^--2^+-6<&0\\
+4^-+2^--6<&0\\
+\lim_{x\to 2^+}\dfrac{x^2-x-6}{x^2+x-6}=&+\infty\\
+\end{align*}
+Quindi \[x=2\] è un asintoto verticale.
+Calcolo il limite \[ \lim_{x\to -3}\dfrac{x^2-x-6}{x^2+x-6}=\dfrac{6}{0}=\infty\] Valutiamo i limiti destro e sinistro. 
+\begin{align*}
+\lim_{x\to -3^+}\dfrac{x^2-x-6}{x^2+x-6}=&\\
+\intertext{dato che}
+(-3^+)^2<&9\\
+(-3^+)^2-(-3^+)-6>&0\\
+(-3^+)^2+(-3^+)-6<&0\\
+\lim_{x\to -3^+}\dfrac{x^2-x-6}{x^2+x-6}=&-\infty\\
+\end{align*}
+\begin{align*}
+\lim_{x\to -3^-}\dfrac{x^2-x-6}{x^2+x-6}=&\\
+\intertext{dato che}
+(-3^-)^2>&9\\
+(-3^-)^2-(-3^-)-6>&0\\
+(-3^-)^2+(-3^-)-6>&0\\
+\lim_{x\to -3^+}\dfrac{x^2-x-6}{x^2+x-6}=&+\infty\\
+\end{align*}
+Quindi \[x=-3\] è un asintoto verticale.
+\begin{cesempiot}{Funzione senza asintoti verticali}{}
+	\[f(x)=\dfrac{x^2+3x}{x^2-x+1} \]
+\end{cesempiot}
+Determino il dominio
+\begin{align*}
+x^2-x+1=&0\\
+\intertext{risolvo l'equazione ed ottengo}
+x_{1,2}=\dfrac{1+\pm\sqrt{1-4}}{2}
+\end{align*}
+L'equazione non ha soluzioni  reali quindi è sempre definita, non ha asintoti verticali.
+\section{Asintoti orizzontali}
+Una funzione $f(x)$ ha un asintoto orizzontale se è verificato che \[\lim_{x\to \infty}f(x)=l \]
+Iniziamo con un esempio di funzione che ha un asintoto orizzontale
+\begin{esempiot}{Asintoti orizzontali}{}
+	\[f(x)=\dfrac{3x^4+2x^3+1}{2x^4+2x+1}\]
+\end{esempiot}\index{Asintoto!orizzontale}
+Calcolo il limite
+\begin{align*}\index{Forma!indeterminata!infinito su infinito}
+\lim_{x\to \infty}\dfrac{3x^4+2x^3+1}{2x^4+2x+1}=&\dfrac{\infty}{\infty}\\
+\intertext{ottengo una forma indeterminata infinto su infinito quindi, raccogliendo i termini di grado maggiore a numeratore e denominatore}
+=&\lim_{x\to \infty}\dfrac{x^4\left(3+\dfrac{2x^2}{x^4}+\dfrac{1}{x^4}\right)}{x^4\left(2+\dfrac{2x}{x^4}+\dfrac{1}{x^4}\right)}\\
+\intertext{semplificando}
+=&\lim_{x\to \infty}\dfrac{x^4\left(3+\dfrac{2x}{x^2}+\dfrac{1}{x^4}\right)}{x^4\left(2+\dfrac{2}{x^3}+\dfrac{1}{x^4}\right)}\\
+\intertext{dato che}
+\lim_{x\to \infty}\dfrac{2}{x^2}=&0\\
+\lim_{x\to \infty}\dfrac{1}{x^4}=&0\\
+\lim_{x\to \infty}\dfrac{2}{x^3}=&0\\
+\dfrac{x^4}{x^4}=&1\\
+\intertext{ottengo}
+=&\lim_{x\to \infty}\dfrac{3}{2}=\dfrac{3}{2}\\
+\end{align*}
+La funzione ha un limite, e di conseguenza ho un asintoto orizzontale\[y=\dfrac{3}{2}\]  
+\begin{esempiot}{Asintoti orizzontali}{}
+	\[f(x)=\dfrac{x^2+x+1}{2x^3+2x+3}\]
+\end{esempiot}
+Per determinare l'asintoto orizzontale calcolo il limite 
+\begin{align*}\index{Forma!indeterminata!infinito su infinito}
+\lim_{x\to \infty}\dfrac{x^2+x+1}{2x^3+2x+3}=&\dfrac{\infty}{\infty}\\
+\intertext{ottengo una forma indeterminata infinto su infinito quindi, raccogliendo i termini di grado maggiore a numeratore e denominatore}
+=&\lim_{x\to \infty}\dfrac{x^2\left(1+\dfrac{x}{x^2}+\dfrac{1}{x^2}\right)}{x^3\left(2+\dfrac{2x}{x^3}+\dfrac{3}{x^3}\right)}\\
+\intertext{semplificando}
+=&\lim_{x\to \infty}\dfrac{x^2\left(1+\dfrac{1}{x}+\dfrac{1}{x^2}\right)}{x^3\left(2+\dfrac{2}{x^2}+\dfrac{3}{x^3}\right)}\\
+\intertext{dato che}
+\lim_{x\to \infty}\dfrac{1}{x}=&0\\
+\lim_{x\to \infty}\dfrac{1}{x^2}=&0\\
+\lim_{x\to \infty}\dfrac{2}{x^2}=&0\\
+\lim_{x\to \infty}\dfrac{3}{x^3}=&0\\
+\dfrac{x^2}{x^3}=&\dfrac{1}{x}\\
+\intertext{ottengo}
+=&\lim_{x\to \infty}\dfrac{1}{x}\cdot\dfrac{1}{2}=0\\
+\end{align*}
+Il limite esiste ed è finito quindi la funzione ha un asintoto orizzontale che è \[y=0\]
+\begin{cesempiot}{Funzione senza asintoto orizzontale}{}
+	\[f(x)=\dfrac{2x^5+x^2+1}{3x^2+1}\]
+\end{cesempiot}
+Per determinare l'asintoto orizzontale calcolo il limite 
+\begin{align*}\index{Forma!indeterminata!infinito su infinito}
+\lim_{x\to \infty}\dfrac{2x^5+x^2+1}{3x^2+1}=&\dfrac{\infty}{\infty}\\
+\intertext{ottengo una forma indeterminata infinto su infinito quindi, raccogliendo i termini di grado maggiore a numeratore e denominatore}
+=&\lim_{x\to \infty}\dfrac{x^5\left(2+\dfrac{x^2}{x^5}+\dfrac{1}{x^5}\right)}{x^2\left(3+\dfrac{1}{x^2}\right)}\\
+\intertext{semplificando}
+=&\lim_{x\to \infty}\dfrac{x^5\left(2+\dfrac{1}{x^3}+\dfrac{1}{x^5}\right)}{x^2\left(3+\dfrac{1}{x^2}\right)}\\
+\intertext{dato che}
+\lim_{x\to \infty}\dfrac{1}{x^3}=&0\\
+\lim_{x\to \infty}\dfrac{1}{x^5}=&0\\
+\lim_{x\to \infty}\dfrac{1}{x^2}=&0\\
+\dfrac{x^5}{x^2}=&x^3\\
+\intertext{ottengo}
+=&\lim_{x\to \infty}x^3\cdot\dfrac{2}{3}=\infty\\
+\end{align*}
+Il limite non esiste  finito quindi la funzione non ha un asintoto orizzontale.
+
+I tre precedenti esempi ci permettono di definire una regola per determinare se una funzione abbia o non abbia un asintoto orizzontale. Una funziona razionale fratta ha un asintoto orizzontale se il grado del denominatore è maggiore o uguale al grado del numeratore. 
+\section{Asintoti obliqui}
+Uan funzione $f(x)$ ha un asintoto obliquo se esiste una retta $y=mx+q$ che verifica \[\lim_{x\to \infty}[f(x)-(mx+q)]=0 \]
+all'atto pratico se esistono e sono finiti entrambi i seguenti limiti
+\begin{align*}
+m=&\lim_{x\to \infty}\dfrac{f(x)}{x}\\
+q=&\lim_{x\to \infty}[f(x)-mx]
+\end{align*}\index{Asintoti!obliqui}
+\begin{esempiot}{Asintoti obliqui}{}
+	\[f(x)=\dfrac{2x^2+x+1}{x+1}\]
+\end{esempiot}
+Per determinare l'asintoto obliquo inizio a calcolare il limite
+\begin{align*}
+m=&\lim_{x\to \infty}\dfrac{f(x)}{x}\\
+=&\lim_{x\to \infty}\dfrac{2x^2+x+1}{x+1}\cdot\dfrac{1}{x}\\
+=&\lim_{x\to \infty}\dfrac{2x^2+x+1}{x^2+x}\\
+=&\lim_{x\to \infty}\dfrac{x^2\left(2+\dfrac{x}{x^2}+\dfrac{1}{x^2}\right)}{x^2\left(1+\dfrac{x}{x^2}\right)}\\
+\intertext{semplifico}
+=&\lim_{x\to \infty}\dfrac{x^2\left(2+\dfrac{1}{x}+\dfrac{1}{x^2}\right)}{x^2\left(1+\dfrac{1}{x}\right)}\\
+\intertext{dato che}
+\dfrac{x^2}{x^2}=&1\\
+\lim_{x\to \infty}\dfrac{1}{x^2}=&0\\
+\lim_{x\to \infty}\dfrac{1}{x}=&0\\
+=&\lim_{x\to \infty}1\cdot 2=2
+\end{align*} 
+Quindi il coefficiente angolare $m$ è due
+\[m=2\]
+Resta da determinare il coefficiente $q$
+\begin{align*}
+q=&\lim_{x\to \infty}[f(x)-mx]\\
+=&\lim_{x\to \infty}[\dfrac{2x^2+x+1}{x+1}-2x]
+\intertext{sommo}
+=&\lim_{x\to \infty}[\dfrac{2x^2+x+1-2x^2-2x}{x+1}]\\
+\intertext{semplificando}
+=&\lim_{x\to \infty}[\dfrac{-x+1}{x+1}]\\
+=&\lim_{x\to \infty}[\dfrac{x\left(-1+\dfrac{1}{x}\right)}{x\left(1+\dfrac{1}{x}\right)}]\\
+\intertext{dato che}
+\dfrac{x}{x}=&1\\
+\lim_{x\to \infty}\dfrac{1}{x}=&0\\
+=&\dfrac{x^2}{x^2}=&1\\
+=&\lim_{x\to \infty}1\cdot\dfrac{-1}{1}=-1\\
+\end{align*}
+Quindi l'asintoto obliquo è
+\[y=2x-1\]
