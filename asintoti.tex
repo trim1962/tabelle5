@@ -4,9 +4,11 @@ Un asintoto è una retta che, in maniera semplice, a cui si avvicina una curva s
 Gli asintoti verticali, per una funzione razionale fratta, sono legati ai valori del dominio.
 Una funzione ha un asintoto verticale se 
 \[\lim_{x\to k}f(x)=\infty\]
-L'asintoto ha equazione \[ x=k\]Iniziamo con un esempio per determinare un asintoto verticale\index{Asintoto!verticale} 
-consideriamo la funzione 
-\begin{esempiot}{Asintoto verticale}{}
+L'asintoto ha equazione \[ x=k\]
+Normalmente vi sono quattro tipi di  asintoti che mostreremo tramite esempi.
+Iniziamo \index{Asintoto!verticale} 
+considerando la funzione 
+\begin{esempiot}{Asintoto verticale}{ass1}
 \[f(x)=\dfrac{x^2-x-6}{x^2+x-6} \]
 \end{esempiot}
 Determiniamo il dominio\index{Funzione!dominio}
@@ -33,10 +35,19 @@ Calcolo il limite \[ \lim_{x\to 2}\dfrac{x^2-x-6}{x^2+x-6}=\dfrac{-4}{0}=\infty\
 \intertext{dato che}
 4^--2^+-6<&0\\
 4^-+2^--6<&0\\
-\lim_{x\to 2^+}\dfrac{x^2-x-6}{x^2+x-6}=&+\infty\\
+\lim_{x\to 2^-}\dfrac{x^2-x-6}{x^2+x-6}=&+\infty\\
 \end{align*}
 Quindi \[x=2\] è un asintoto verticale.
-Calcolo il limite \[ \lim_{x\to -3}\dfrac{x^2-x-6}{x^2+x-6}=\dfrac{6}{0}=\infty\] Valutiamo i limiti destro e sinistro. 
+L'asintoto è del tipo più infinito meno infinito come il grafico~\vref{fig:asintotopm}
+\begin{figure}
+	\centering
+\includestandalone{grafici/asintotoPM}
+\captionsetup{format=grafico}
+	\caption[Asintoto piu infinito meno infinito]{Asintoto piu infinito meno infinito}
+	\label{fig:asintotopm}
+\end{figure}
+
+Calcolo il limite \[\lim_{x\to -3}\dfrac{x^2-x-6}{x^2+x-6}=\dfrac{6}{0}=\infty\] Valutiamo i limiti destro e sinistro. 
 \begin{align*}
 \lim_{x\to -3^+}\dfrac{x^2-x-6}{x^2+x-6}=&\\
 \intertext{dato che}
@@ -51,10 +62,73 @@ Calcolo il limite \[ \lim_{x\to -3}\dfrac{x^2-x-6}{x^2+x-6}=\dfrac{6}{0}=\infty\
 (-3^-)^2>&9\\
 (-3^-)^2-(-3^-)-6>&0\\
 (-3^-)^2+(-3^-)-6>&0\\
-\lim_{x\to -3^+}\dfrac{x^2-x-6}{x^2+x-6}=&+\infty\\
+\lim_{x\to -3^-}\dfrac{x^2-x-6}{x^2+x-6}=&+\infty\\
 \end{align*}
 Quindi \[x=-3\] è un asintoto verticale.
-\begin{cesempiot}{Funzione senza asintoti verticali}{}
+\begin{esempiot}{Asintoto verticale}{AssMP}
+	\[f(x)=\dfrac{2-x}{x-1}\]
+\end{esempiot}
+Dato che la funzione è una razionale fratta ne calcolo il dominio ponendo il denominatore uguale a zero\[x-1=0\]Ha soluzione $x=1$ quindi il domino è $\R-\lbrace1\rbrace$
+
+Calcoliamo il limite\[\lim_{x\to 1}\dfrac{2-x}{x-1}=\dfrac{2-1}{0}=\infty\]
+Valutiamo i limiti destro e sinistro
+\begin{align*}
+\lim_{x\to 1^+}\dfrac{2-x}{x-1}=&\\
+\intertext{dato che}
+2-1^+>&0\\
+1^+-1>&0\\
+\intertext{avremo che}
+\lim_{x\to 1^+}\dfrac{2-x}{x-1}=&+\infty\\
+\lim_{x\to 1^-}\dfrac{2-x}{x-1}=&\\
+\intertext{dato che}
+2-1^->&0\\
+1^--1<&0\\
+\intertext{avremo che}
+\lim_{x\to 1^-}\dfrac{2-x}{x-1}=&-\infty\\
+\end{align*}
+Quindi \[x=2\] è un asintoto verticale.
+L'asintoto è del tipo meno infinito più infinito come il grafico~\vref{fig:asintotomp}
+\begin{figure}
+	\centering
+	\includestandalone{grafici/asintotoMP}
+	\captionsetup{format=grafico}
+	\caption[Asintoto meno infinito più infinito]{Asintoto meno infinito più infinito}
+	\label{fig:asintotomp}
+\end{figure}
+Consideriamo un altra  funzione
+\begin{esempiot}{Asintoto verticale}{AsintotoPP}
+	\[f(x)=\dfrac{x^2+1}{x^2-2x-1} \]
+\end{esempiot}\index{Asintoto!verticale}
+La funzione è una razionale fratta per determinarne il dominio pongo il denominatore uguale a zero e risolvo
+\[x^2-2x-1=0\]Ha soluzione $x=1$ quindi il domino è $\R-\lbrace1\rbrace$
+
+Calcoliamo il limite\[\lim_{x\to 1}\dfrac{x^2+1}{x^2-2x-1}=\dfrac{2}{0}=\infty\]
+Valutiamo i limiti destro e sinistro
+\begin{align*}
+\lim_{x\to 1^+}\dfrac{x^2+1}{x^2-2x-1}=&\\
+\intertext{dato che}
+(1^+)^2+1>&0\\
+(1^+)^2 -2\cdot 1^+ +1>&0\\
+\intertext{quindi}
+\lim_{x\to 1^+}\dfrac{x^2+1}{x^2-2x-1}=&+\infty\\
+\intertext{Valuto ora}
+\lim_{x\to 1^-}\dfrac{x^2+1}{x^2-2x-1}=&\\
+\intertext{dato che}
+(1^+)^2+1>&0\\
+(1^+)^2 -2\cdot 1^+ +1>&0\\
+\intertext{avremo che}
+\lim_{x\to 1^+}\dfrac{x^2+1}{x^2-2x-1}=&+\infty\\
+\end{align*}
+Quindi \[x=1\] è un asintoto verticale.
+L'asintoto è del tipo più infinito più infinito come il grafico~\vref{fig:asintotopp}
+\begin{figure}
+	\centering
+	\includestandalone{grafici/asintotoPP}
+	\captionsetup{format=grafico}
+	\caption[Asintoto più infinito più infinito]{Asintoto piu infinito più infinito}
+	\label{fig:asintotopp}
+\end{figure}
+\begin{cesempiot}{Funzione senza asintoti verticali}{ass2}
 	\[f(x)=\dfrac{x^2+3x}{x^2-x+1} \]
 \end{cesempiot}
 Determino il dominio
@@ -67,7 +141,7 @@ L'equazione non ha soluzioni  reali quindi è sempre definita, non ha asintoti v
 \section{Asintoti orizzontali}
 Una funzione $f(x)$ ha un asintoto orizzontale se è verificato che \[\lim_{x\to \infty}f(x)=l \]
 Iniziamo con un esempio di funzione che ha un asintoto orizzontale
-\begin{esempiot}{Asintoti orizzontali}{}
+\begin{esempiot}{Asintoti orizzontali}{ass3}
 	\[f(x)=\dfrac{3x^4+2x^3+1}{2x^4+2x+1}\]
 \end{esempiot}\index{Asintoto!orizzontale}
 Calcolo il limite
@@ -86,7 +160,7 @@ Calcolo il limite
 =&\lim_{x\to \infty}\dfrac{3}{2}=\dfrac{3}{2}\\
 \end{align*}
 La funzione ha un limite, e di conseguenza ho un asintoto orizzontale\[y=\dfrac{3}{2}\]  
-\begin{esempiot}{Asintoti orizzontali}{}
+\begin{esempiot}{Asintoti orizzontali}{ass4}
 	\[f(x)=\dfrac{x^2+x+1}{2x^3+2x+3}\]
 \end{esempiot}
 Per determinare l'asintoto orizzontale calcolo il limite 
@@ -106,7 +180,7 @@ Per determinare l'asintoto orizzontale calcolo il limite
 =&\lim_{x\to \infty}\dfrac{1}{x}\cdot\dfrac{1}{2}=0\\
 \end{align*}
 Il limite esiste ed è finito quindi la funzione ha un asintoto orizzontale che è \[y=0\]
-\begin{cesempiot}{Funzione senza asintoto orizzontale}{}
+\begin{cesempiot}{Funzione senza asintoto orizzontale}{ass5}
 	\[f(x)=\dfrac{2x^5+x^2+1}{3x^2+1}\]
 \end{cesempiot}
 Per determinare l'asintoto orizzontale calcolo il limite 
@@ -134,7 +208,7 @@ all'atto pratico se esistono e sono finiti entrambi i seguenti limiti
 m=&\lim_{x\to \infty}\dfrac{f(x)}{x}\\
 q=&\lim_{x\to \infty}[f(x)-mx]
 \end{align*}\index{Asintoti!obliqui}
-\begin{esempiot}{Asintoti obliqui}{}
+\begin{esempiot}{Asintoti obliqui}{ass6}
 	\[f(x)=\dfrac{2x^2+x+1}{x+1}\]
 \end{esempiot}
 Per determinare l'asintoto obliquo inizio a calcolare il limite

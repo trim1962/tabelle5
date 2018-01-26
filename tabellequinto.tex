@@ -4,7 +4,7 @@
 \input{../Mod_base/base}
 \geometry{top=1.5cm,bottom=1.5cm}
 \input{../Mod_base/grafica}
-\input{../Mod_base/rifIndici}
+% 26/01/2018 :: 13:03:47 :: \input{../Mod_base/rifIndici}
 \input{../Mod_base/stand_class}
 
 \input{../Mod_base/matematica}
@@ -16,12 +16,13 @@
 \newcolumntype{C}{>{$\displaystyle}c<{$}}
 \newcolumntype{R}{>{$\displaystyle}r<{$}}
 \newcolumntype{W}{>{\sffamily\Large $}c<{$}}
+\usepackage{imakeidx}
 \makeindex[options=-s ../Mod_base/oldclaudio.sti]
 \input{../Mod_base/pagina}
 \input{../Mod_base/date}
 \input{../Mod_base/loghi}
 \input{../Mod_base/unita_misura}
-\input{../Mod_base/tcolorboxgest}
+
 %\input{../Mod_base/glossario}
 %\newglossary[slg]{symbolslist}{sym}{sbl}{Elenco di simboli}
 %
@@ -49,8 +50,7 @@
 \makeatother
 \input{../Mod_base/indice}
 \input{../Mod_base/utili}
-\usepackage{hyperxmp}
-\usepackage{hyperref}
+
 \title{Appunti di Matematica}
 \author{Claudio Duchi}
 \date{\datetime}
@@ -64,6 +64,11 @@
 	\end{tikzpicture}
 \end{center}
 }
+\usepackage[italian]{varioref}
+\usepackage{hyperxmp}
+\usepackage[pdfpagelabels]{hyperref}
+\usepackage[italian]{cleveref}
+\input{../Mod_base/tcolorboxgest}
 \usepackage[grumpy,mark,markifdirty,raisemark=0.95\paperheight]{gitinfo2}
 \hypersetup{%
 	pdfencoding=auto,
@@ -127,7 +132,7 @@
 
 	\end{titlepage}
 \setcounter{page}{2}
-\hypersetup{pageanchor=true}
+%\hypersetup{pageanchor=true}
 \input{../Mod_base/copyright}
 \tableofcontents 
 \cleardoublepage
@@ -138,8 +143,11 @@
 \addcontentsline{toc}{chapter}{\listfigurename}
 \cleardoublepage\renewcommand\lstlistlistingname{Elenco esempi}
 \addcontentsline{toc}{chapter}{\lstlistlistingname}
+\clearpage
+\phantomsection
 \addcontentsline{toc}{section}{Esempi}
 \lstlistoflistings{}
+
 \tcblistof[\section*]{thm}{Esempi}
 \addcontentsline{toc}{section}{Contro esempi}
 \tcblistof[\section*]{cthm}{Contro esempi}
