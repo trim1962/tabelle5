@@ -1,0 +1,23 @@
+\documentclass[10pt]{standalone}
+
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+%\draw [color=black,, xstep=2.0cm,ystep=2.0cm] (-8.,-0.5) grid (8.,13.);
+\draw[->,color=black] (-8.,0.) -- (8.,0.);
+\foreach \x in {-8.,-6.,-4.,-2.,2.,4.,6.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,-0.5) -- (0.,13.);
+\foreach \y in {,2.,4.,6.,8.,10.,12.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-8.,-0.5) rectangle (8.,13.);
+\draw[samples=250,domain=-8.0:8.0] plot(\x,{(3.0*(\x)^(4.0)+3.0*(\x)^(3.0)+1.0)/(2.0*(\x)^(4.0)+2.0*(\x)+1.0)});
+\draw [domain=-8.:8.] plot(\x,{(--1.5-0.*\x)/1.});
+
+\end{tikzpicture}
+\end{document}
