@@ -244,7 +244,14 @@ Per determinare l'asintoto orizzontale calcolo il limite
 \intertext{ottengo}
 =&\lim_{x\to \infty}\dfrac{1}{x}\cdot\dfrac{1}{2}=0\\
 \end{align*}
-Il limite esiste ed è finito quindi la funzione ha un asintoto orizzontale che è \[y=0\]
+Il limite esiste ed è finito quindi la funzione ha un asintoto orizzontale che è \[y=0\] come mostrato nel grafico~\vref{fig:asintotorizzodue}
+\begin{figure}
+	\centering
+	\includestandalone{grafici/asintotorizzodue}
+	\captionsetup{format=grafico}
+	\caption[Asintoto orizzontale]{Asintoto orizzontale}
+	\label{fig:asintotorizzodue}
+\end{figure}
 \begin{cesempiot}{Funzione senza asintoto orizzontale}{ass5}
 	\[f(x)=\dfrac{2x^5+x^2+1}{3x^2+1}\]
 \end{cesempiot}
@@ -263,11 +270,18 @@ Per determinare l'asintoto orizzontale calcolo il limite
 \intertext{ottengo}
 =&\lim_{x\to \infty}x^3\cdot\dfrac{2}{3}=\infty\\
 \end{align*}
-Il limite non esiste  finito quindi la funzione non ha un asintoto orizzontale.
+Il limite non esiste  finito quindi la funzione non ha un asintoto orizzontale. Il suo comportamento è mostrato dal grafico~\vref{fig:asintotorizzotre}.
+\begin{figure}
+	\centering
+	\includestandalone{grafici/asintotorizzotre}
+	\captionsetup{format=grafico}
+	\caption[Asintoto orizzontale]{Asintoto orizzontale}
+	\label{fig:asintotorizzotre}
+\end{figure}
 
 I tre precedenti esempi ci permettono di definire una regola per determinare se una funzione abbia o non abbia un asintoto orizzontale. Una funziona razionale fratta ha un asintoto orizzontale se il grado del denominatore è maggiore o uguale al grado del numeratore. 
 \section{Asintoti obliqui}
-Uan funzione $f(x)$ ha un asintoto obliquo se esiste una retta $y=mx+q$ che verifica \[\lim_{x\to \infty}[f(x)-(mx+q)]=0 \]
+Una funzione $f(x)$ ha un asintoto obliquo se esiste una retta $y=mx+q$ che verifica \[\lim_{x\to \infty}[f(x)-(mx+q)]=0 \]
 all'atto pratico se esistono e sono finiti entrambi i seguenti limiti
 \begin{align*}
 m=&\lim_{x\to \infty}\dfrac{f(x)}{x}\\
@@ -276,7 +290,14 @@ q=&\lim_{x\to \infty}[f(x)-mx]
 \begin{esempiot}{Asintoti obliqui}{ass6}
 	\[f(x)=\dfrac{2x^2+x+1}{x+1}\]
 \end{esempiot}
-Per determinare l'asintoto obliquo inizio a calcolare il limite
+\begin{figure}
+	\centering
+	\includestandalone[scale=0.3]{grafici/asintotoobliquouno}
+	\captionsetup{format=grafico}
+	\caption[Asintoto obliquo]{Asintoto obliquo}
+	\label{fig:asintoobliquouno}
+\end{figure}
+Per determinare l'asintoto obliquo iniziamo a calcolare il limite
 \begin{align*}
 m=&\lim_{x\to \infty}\dfrac{f(x)}{x}\\
 =&\lim_{x\to \infty}\dfrac{2x^2+x+1}{x+1}\cdot\dfrac{1}{x}\\
@@ -309,3 +330,4 @@ q=&\lim_{x\to \infty}[f(x)-mx]\\
 \end{align*}
 Quindi l'asintoto obliquo è
 \[y=2x-1\]
+Il grafico~\vref{fig:asintoobliquouno} mostra l'andamento.
