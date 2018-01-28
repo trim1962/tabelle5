@@ -331,3 +331,27 @@ q=&\lim_{x\to \infty}[f(x)-mx]\\
 Quindi l'asintoto obliquo è
 \[y=2x-1\]
 Il grafico~\vref{fig:asintoobliquouno} mostra l'andamento.
+\begin{cesempiot}{Manca asintoto obliquo}{mancaasobli1}
+\[f(x)=\dfrac{x^4+1}{x+1}\]
+\end{cesempiot}
+Calcolo il limite
+\begin{align*}
+m=&\lim_{x\to \infty}\dfrac{x^4+1}{x+1}\cdot\dfrac{1}{x}\\
+=&\lim_{x\to \infty}\dfrac{x^4+1}{x^2+x}\\
+=&\lim_{x\to \infty}\dfrac{x^4\left( 1+\dfrac{1}{x^4}\right)}{x^2\left( 1+\dfrac{1}{x}\right)}
+\intertext{dato  che}
+\dfrac{x^4}{x^2}=&x^2\\
+\lim_{x\to \infty}\dfrac{1}{x^4}=&0\\
+\lim_{x\to \infty}\dfrac{1}{x}=&0\\
+\intertext{avremo che}
+\lim_{x\to \infty}x^2=&\infty
+\end{align*}
+Quindi la funzione non ha un asintoto obliquo. Notiamo che non ha neppure un asintoto orizzontale. Ricordiamo che se ha un asintoto orizzontale allora non ha un asintoto obliquo. Qui si vede che una funzione che non ha asintoto obliquo e non ha un asintoto orizzontale  
+\begin{osservazionet}{Polinomi e asintoti}{Osservazione1}
+	Un polinomio, essendo definito su tutto $R$ non ha asintoti verticali e dato che il limite per x che tende a infinito è infinito non ha asintoti orizzontali. Un polinomio ha un asintoto obliquo solo se è di primo grado.
+\end{osservazionet}
+Per esempio consideriamo la funzione \[ f(x)=3x+4\]Il domino di questa funzione è tutto  $R$ quindi non ha asintoti verticali.
+\[\lim_{x\to \infty}3x+4=\infty \]Quindi non ha asintoti orizzontali\begin{align*}
+m&=\lim_{x\to \infty}\dfrac{3x+4}{x}=3\\q=&\lim_{x\to \infty}[3x+4-3x]=4
+\end{align*}
+Quindi $f(x)=3x+4$ è l'asintoto obliquo di se stesso.
