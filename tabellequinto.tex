@@ -31,9 +31,7 @@
 %\loadglsentries[altacronym]{glossario/acronimi1}
 %\loadglsentries[acronym]{glossario/simboli1}
 \usepackage[toc,page]{appendix}
-
 \renewcommand{\appendixtocname}{Appendice}
-
 \renewcommand{\appendixpagename}{Appendice}
 \newcommand{\tabincludestandalone}[2][]{%
 	$\vcenter{\hbox{\includestandalone[#1]{#2}}}$}
@@ -57,7 +55,7 @@
 \usepackage{tkz-berge}
 \newcommand{\polylogo}[1]{
 \begin{center}
-			\begin{tikzpicture}
+	\begin{tikzpicture}
 	\renewcommand*{\VertexBallColor}{green!50!black}
 	\GraphInit[vstyle=Art]
 	\grComplete[RA=6]{#1}
@@ -81,7 +79,7 @@
 	pdflang={it},
 	pdfmetalang={it},
 	pdfkeywords={Analisi},
-	pdfcopyright={Copyright (C) 2018, Claudio Duchi},
+	pdfcopyright={Copyright (C) 2019, Claudio Duchi},
 	pdfcontacturl={http://breviariomatematico.altervista.org},
 	pdfcontactpostcode={},
 	pdfcontactphone={},
@@ -100,8 +98,8 @@
 	verbose,
 	baseurl={http://breviariomatematico.altervista.org}
 }
-% \usepackage{draftwatermark}
-%\SetWatermarkText{BOZZA}
+ \usepackage{draftwatermark}
+\SetWatermarkText{BOZZA}
 \input{compilaTexStudio}
 \listfiles
 \begin{document}
@@ -135,16 +133,12 @@
 %\hypersetup{pageanchor=true}
 \input{../Mod_base/copyright}
 \tableofcontents 
-\cleardoublepage
 \listoftables
 \addcontentsline{toc}{chapter}{\listtablename}
-\cleardoublepage
 \listoffigures
 \addcontentsline{toc}{chapter}{\listfigurename}
-\cleardoublepage\renewcommand\lstlistlistingname{Elenco esempi}
+\renewcommand\lstlistlistingname{Elenco esempi}
 \addcontentsline{toc}{chapter}{\lstlistlistingname}
-\clearpage
-\phantomsection
 \addcontentsline{toc}{section}{Esempi}
 \lstlistoflistings{}
 
