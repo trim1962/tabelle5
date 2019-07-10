@@ -68,7 +68,7 @@
 \usepackage[italian]{cleveref}
 \usepackage{tcolorboxgest}
 \usepackage[grumpy,mark,markifdirty,raisemark=0.95\paperheight]{gitinfo2}
-\usepackage[write,date]{gitlog}
+\usepackage[write,date,bibfile=gitcommit]{gitlog}
 \hypersetup{%
 	pdfencoding=auto,
 	urlcolor={blue},
@@ -156,7 +156,6 @@
 \printindex\cleardoublepage
 \printGitLog
 \appendix
-	\input{../Mod_base/MezziUsati}
-
-
+\chapter{Mezzi usati}
+\CDMezziUsati
 \end{document}
