@@ -1,0 +1,12 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{pagina}[2019/07/09]
+\RequirePackage{indentfirst}
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{\ifthenelse{\isodd{\value{page}}}{\leftmark}{\rightmark}}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot{}
+\fancyfoot[L]{\bfseries\today}
+\fancyfoot[R]{\bfseries\DTMcurrenttime}

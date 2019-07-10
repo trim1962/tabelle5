@@ -1,0 +1,102 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{matematica}[2019/07/09]
+\RequirePackage{bm}
+\RequirePackage{amsmath}
+\DeclareMathOperator{\arccot}{arccot}
+%\DeclareMathOperator{\sec}{sec}
+\DeclareMathOperator{\cosec}{cosec}
+\DeclareMathOperator{\difs}{\bigtriangleup}
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+%operatore derivata
+\newcommand{\OpD}[1]{D\left[#1\right]} 
+%\newcommand{\gradi}{\ensuremath{^\circ}}
+%\newcommand{\gradi}{\ensuremath{\degree}}
+%\newcommand{\minuti}{\ensuremath{\arcminute}}
+\newcommand{\PA}[1]{\boldsymbol{\mathcal{#1}}}
+\newcommand{\PDA}{\PA{P}}
+\newcommand{\numberset}[1]{\mathbb{#1}}
+
+\newcommand{\Ni}{\numberset{N}}
+\newcommand{\Nz}{\numberset{N}^{}_{0}}
+\newcommand{\Z}{\numberset{Z}}
+\newcommand{\Zn}{\numberset{Z^-}}
+\newcommand{\Zp}{\numberset{Z^{+}}}
+\newcommand{\Q}{\numberset{Q}}
+\newcommand{\Qp}{\numberset{Q^{+}}}
+\newcommand{\Qn}{\numberset{Q^{-}}}
+\newcommand{\R}{\numberset{R}}
+\newcommand{\Rpos}{\numberset{R^{+}}}
+\newcommand{\Rneg}{\numberset{R^{-}}}
+\newcommand{\nq}{\ensuremath{\mathbb{Q}}}
+\newcommand{\bld}[1]{\mbox{\boldmath $#1$}}
+\newcommand{\Co}{\numberset{C}}
+\newcommand{\function}[5]{%
+	\begin{array}{@{}r<{{}}@{}c@{}c@{}l@{}}
+		#1\colon & #2 & {}\to{}     & #3 \\
+		& #4 & {}\mapsto{} & #5
+\end{array}}
+\newcommand{\funzione}[3]{#1\colon #2\to{}#3}
+%spazi fantasma
+%\newcommand{\spa}{\phantom{1}}
+%\let\origcleardoublepage\cleardoublepage
+%\newcommand{\clearemptydoublepage}{%
+%\clearpage
+%{\pagestyle{empty}\origcleardoublepage}%
+%}
+%\let\cleardoublepage\clearemptydoublepage
+%spazio insecabile
+%\newcommand{\nbs}{\nobreakspace}
+%le costanti
+\newcommand{\costante}{\textrm{costante}}
+%\DeclareMathOperator{\uimm}{j}
+% The number `e'
+\providecommand*{\eu}%
+{\ensuremath{\mathrm{e}}}
+\providecommand*{\uimm}%
+%{\ensuremath{\mathrm{j}}}
+{j\mkern1mu}
+% parte immaginaria di 1: \parteimm[\dot{x}(t)]
+% \DeclareMathOperator{\Re}{Re}
+% \DeclareMathOperator{\Im}{Im}
+% \DeclareMathOperator{\Arg}{Arg}
+%coniugio
+\newcommand{\conj}[2][3]{{}\mkern#1mu\overline{\mkern-#1mu#2}}
+\let\misura\conj
+%  \renewoperator{\Re}%
+%  {\mathrm{Re}}{\nolimits}
+%  \renewoperator{\Im}%
+%  {\mathrm{Im}}{\nolimits}
+\DeclareMathOperator{\mcd}{mcd}
+\DeclareMathOperator{\mcm}{mcm}
+% % % %prodotto in croce
+\newcommand{\prodcroce}[4]{%
+	\begin{tikzpicture}[thick]
+	\def\x{2.8mm}
+	\def\h{2.4mm}
+	\def\dist{12mm}%1cm
+	\node at (0,0) {$\displaystyle \frac{#1}{#2}$};
+	\node at (\dist,0) {$\displaystyle \frac{#3}{#4}$};
+	\node at (2.5*\dist,0) {$#1\cdot #4=#2\cdot #3$};
+	% collegamento termini
+	\draw[-stealth] (\x, \h)--(\dist-\x,-\h); 
+	\draw[-stealth] (\x,-\h)--(\dist-\x, \h);
+	\end{tikzpicture}%
+}
+\newcommand*{\rectangolo}[1]{\tikz[baseline=(char.base)]{
+		\node[shape=rectangle,draw,inner sep=2pt] (char) {#1};}}
+\newcommand*{\circled}[1]{\tikz[baseline=(char.base)]{
+		\node[shape=circle,draw,inner sep=2pt] (char) {#1};}}%numeri in circonferenze
+\newcommand*{\numcircledmod}[1]{\raisebox{.5pt}{\textcircled{\raisebox{-.9pt} {#1}}}}%numeri in circonferenze 2 versione 
+\newcommand*{\csqrt}[2]{\sqrt[\numcircledmod{#1}]{#2}}
+\DeclareMathSymbol{\vs}{\mathpunct}{letters}{"3B}
+%\newcommand{\matsig}[1]{\boldsymbol{\mathcal{#1}}}
+\newcommand{\coord}[2]{\left(#1 \vs #2\right)}
+\newcommand{\xunodue}[3]{\dfrac{-(#2)\pm\sqrt{(#2)^2-4(#1)(#3)}}{2(#1)}}
+\RequirePackage{cancel}
+% % % % % % % % % % insiemi
+\RequirePackage{braket}
+%\RequirePackage{xlop}
+%  \input{../Mod_base/macro_xlop} % scomposizione in fattori primi e operazioni
+%
+%  \getprime{20}%

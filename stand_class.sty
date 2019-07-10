@@ -1,0 +1,9 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{stand_class}[2019/07/09]
+
+%\RequirePackage[subpreambles=true,sort=true,print=true]{standalone}
+\RequirePackage{standalone}
+%\standaloneconfig{ mode=image|tex }
+\standaloneconfig{mode=buildnew}
+\newcommand{\tabincludestandalone}[2][]{%
+	$\vcenter{\hbox{\includestandalone[#1]{#2}}}$}

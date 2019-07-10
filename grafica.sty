@@ -1,0 +1,19 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{grafica}[2019/07/09]
+\RequirePackage{forest}
+\RequirePackage{tkz-euclide}
+\usetkzobj{all}
+\RequirePackage{circuitikz}
+\RequirePackage{tkz-tab}
+\RequirePackage{tkz-linknodes}
+\usetikzlibrary{calc}
+%\usetikzlibrary{hobby}
+\RequirePackage{pgfplots}
+ \pgfplotsset{compat=newest}
+\usetikzlibrary{decorations}
+\usetikzlibrary{shapes,arrows,trees,positioning,through,intersections}
+\usetikzlibrary{shapes.misc,shapes.geometric,shapes.symbols,shapes.geometric}
+\usetikzlibrary{shapes.gates.logic.US,shapes.gates.logic.IEC}
+\usetikzlibrary{patterns}
+\usetikzlibrary{shadows}
+\newcommand{\tikzmark}[1]{\tikz[remember picture,overlay,baseline=-.7ex]\node(#1){};}

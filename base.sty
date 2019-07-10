@@ -1,0 +1,44 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{base}[2019/07/09]
+\RequirePackage{amsmath}
+\RequirePackage{amsthm}
+% 10/09/2017 :: 10:07:45 :: \RequirePackage{amsfonts}
+\RequirePackage{amssymb}
+\RequirePackage{ifluatex}
+\ifluatex
+% Lua(La)TeX
+\RequirePackage[italian]{babel}
+%\RequirePackage{polyglossia}   
+%\setmainlanguage[spelling=new,babelshorthands=true]{german}
+\RequirePackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\RequirePackage{unicode-math} 
+\unimathsetup{math-style=TeX}
+\setmainfont[Ligatures=TeX]{Constantia} 
+\setsansfont{Calibri}
+\setmonofont{Consolas}
+\setmathrm{Cambria Math}
+\setmathfont{Cambria Math}
+\else
+%default: pdf(La)TeX
+\RequirePackage[italian]{babel}
+%\RequirePackage{concmath}
+
+%\RequirePackage{newtxtext,newtxmath}
+
+
+ % load vector font
+\RequirePackage[T1]{fontenc} % font encoding
+\RequirePackage[utf8]{inputenc} % input encoding
+%\RequirePackage{noto}
+\RequirePackage[largesc]{newtxtext} %
+\RequirePackage[varqu,varl]{zi4}% inconsolata
+\RequirePackage{cabin}% sans serif
+\RequirePackage[vvarbb]{newtxmath}
+\useosf % use oldstyle figures except in math
+
+\fi
+\RequirePackage[babel=true]{microtype}
+\RequirePackage{geometry}
+%\RequirePackage{textcomp}
+% 10/09/2017 :: 10:16:38 :: \geometry{top=2cm,bottom=2cm,left=2cm,right=2cm}

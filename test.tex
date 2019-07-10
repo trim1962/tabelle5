@@ -1,0 +1,40 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{tikz,pgf}
+\usepackage{lipsum}
+\newcommand{\relazione}[3]{
+	\begin{tikzpicture}[auto]
+\usetikzlibrary{shapes ,arrows ,fit,calc}
+\pgfmathsetmacro{\mraggio}{\linewidth/2.2};
+\tikzset{box/.style={draw, rectangle , rounded corners , thick ,
+	%	node distance=7em, text width=6em, text centered ,
+	node distance=7em, text width=8em, text centered ,
+		minimum height=3.5em}};
+
+\node(A){#1};
+\node[box, right of=A,,node distance=\mraggio](B){#2};
+\node[right of=B,,node distance=\mraggio](C){#3};
+\draw (A)--(B);
+\draw [->, -stealth](B)--(C);
+\end{tikzpicture}
+}
+\author{claudio duchi}
+\begin{document}
+\lipsum[12]	
+
+\relazione{a}{una relazione che mette in corrispondenza due insiemi}{b}
+
+\lipsum[12]	
+\begin{center}
+	\relazione{e}{una relazione che mette in corrispondenza due insiemi}{b}
+\end{center}
+
+\lipsum[12]	
+\end{document}

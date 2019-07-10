@@ -23,3 +23,5 @@
 *.out
 *.tdo
 *.ggb
+*.bcf
+*.run.xml
