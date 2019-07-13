@@ -18,18 +18,10 @@
 \usepackage{pagina}
 \usepackage{unita_misura}
 
-%\input{../Mod_base/glossario}
-%\newglossary[slg]{symbolslist}{sym}{sbl}{Elenco di simboli}
-%
-%\makeglossaries
-%\loadglsentries{glossario/glossari4}
-%\loadglsentries[altacronym]{glossario/acronimi1}
-%\loadglsentries[acronym]{glossario/simboli1}
 \usepackage[toc,page]{appendix}
 \renewcommand{\appendixtocname}{Appendice}
 \renewcommand{\appendixpagename}{Appendice}
-%\newcommand{\tabincludestandalone}[2][]{%
-%	$\vcenter{\hbox{\includestandalone[#1]{#2}}}$}
+
 
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 \makeatletter
@@ -94,29 +86,21 @@
 \begin{document}
 \frontmatter
 \begin{titlepage}
-	
-	\begin{center}
-		
-		
-		% Upper part of the page
-			%\includestandalone{../Mod_base/Lgrande2}\\[1cm]    
-			
+\begin{center}	
 		\Lgrandedue\\[1cm]    
-		\textsc{\LARGE Claudio Duchi}\\[1.5cm]
-		
-		%\textsc{\Large Final year project}\\[0.5cm]
-		
-		
-		% Title
+		\textsc{\LARGE Claudio Duchi}\\[1.2cm]
 		\HRule \\[0.4cm]
 		{ \huge \bfseries Appunti di matematica}\\[0.4cm]
 		{\bfseries QUINTO}\\[0.4cm]
 		\vfill
 				% Bottom of the page
-			\polylogo{15}		
+			\polylogo[5.5]{15}		
 		{\large $-$\DTMnow$-$}
 		\end{center}
-
+{\centering
+	Release:\gitReln\ (\gitAbbrevHash)\ Autore:\gitAuthorName\ 
+	\gitCommitterDate \\
+}
 	\end{titlepage}
 \setcounter{page}{2}
 %\hypersetup{pageanchor=true}
