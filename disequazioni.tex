@@ -69,10 +69,10 @@ procediamo come nella figura\nobs\vref{fig:esempioDisequazioniPgrado1}
 Il procedimento è  quello della risoluzione di un'equazione di primo grado, si trasportano a sinistra i valori con l'incognita, a destra i numeri, vale la stessa regola che si usa per le equazioni: spostando i termini rispettto al verso, si cambia di segno. Per rappresentare la soluzione si usa un metodo grafico che rappresenta le soluzioni. Il grafico dell'esempio è la figura\nobs\vref{fig:esempioDisequazioniPgradografico1}. Per disegnare il grafico della soluzione si procede in questa maniera: 
 \begin{procedurat}{}{}
 	\begin{enumerate}
-		\item si traccia una linea orizzontale orientata, l'asse dei numeri.
-		\item si mette sotto di essa la soluzione trovata.
-		\item in corrispondenza della soluzione si traccia un segmento verticale.
-		\item  si guarda la soluzione e dalla parte superiore del segmento si traccia una semiretta continua nella direzione della freccia e una semiretta tratteggiata dal lato opposto.
+		\item Si traccia una linea orizzontale orientata, l'asse dei numeri.
+		\item Si mette sotto di essa la soluzione trovata.
+		\item In corrispondenza della soluzione si traccia un segmento verticale.
+		\item Si guarda la soluzione e dalla parte superiore del segmento si traccia una semiretta continua nella direzione della freccia e una semiretta tratteggiata dal lato opposto.
 	\end{enumerate}
 \end{procedurat}
 \begin{figure}
@@ -90,6 +90,32 @@ Il procedimento è  quello della risoluzione di un'equazione di primo grado, si 
 	\captionsetup{format=grafico,list=no}
 	\caption[]{Disequazione\nobs\vref{equ:PrimoGradoDisequazione1}}
 	\label{fig:esempioDisequazioniPgradografico1}
+\end{figure}
+\begin{esempiot}{Disequazione di primo grado, cambio di verso}{}
+	\begin{equation}
+	20x-12\geq 5x+8\label{equ:PrimoGradoDisequazione2}
+	\end{equation}
+\end{esempiot}
+procediamo come nella figura\nobs\vref{fig:esempioDisequazioniPgrado2}
+\begin{figure}
+	\begin{NodesList}[margin=4.5cm]
+		\centering
+		\begin{align*}
+		2x-12\geq 5x+8\AddNode\\[.5cm] 
+		2x-12-5x\geq+8\AddNode\\[.5cm] %\AddNode[2]\\ 
+		2x-5x\geq 12+8\AddNode\\
+		-3x\geq &20\AddNode\\
+		x\leq&-\dfrac{20}{3}\AddNode
+		\end{align*}
+		\tikzset{LabelStyle/.style = {right=0.1cm,pos=0.5,text=red,fill=white}}
+		\LinkNodes{Sposto $5x$ e cambio di segno}
+		\LinkNodes{Sposto $+12$ e cambio di segno}%
+		\LinkNodes{Sommo}%
+		\LinkNodes{Cambio di segno e di verso}%
+	\end{NodesList}
+	\captionsetup{format=esempio,list=no}
+	\caption{Risoluzione disequazione\nobs\vref{equ:PrimoGradoDisequazione1}}
+	\label{fig:esempioDisequazioniPgrado2}
 \end{figure}
 \section{Disequazioni di secondo grado}
 \section{Disequazioni fratte}
