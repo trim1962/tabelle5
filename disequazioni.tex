@@ -81,7 +81,7 @@ Il procedimento è  quello della risoluzione di un'equazione di primo grado, si 
 	\begin{tikzpicture}
 	\draw[ -triangle 90](0,0)--(5,0);
 	\draw(2,0)--(2,1);
-	\draw [fill=black] (2.,1.) circle (2.0pt);
+	\draw (2.,1.) circle (2.0pt);
 	%%%%%soluzioni
 	%%%sinistra	
 	\draw[dashed](2,1)--(5,1);
@@ -121,6 +121,23 @@ procediamo come nella figura\nobs\vref{fig:esempioDisequazioniPgrado2}
 	\label{fig:esempioDisequazioniPgrado2}
 \end{figure}
 Anche in questo caso otteniamo un grafico simile al precedente.
+\begin{figure}
+	\centering
+	\begin{tikzpicture}
+	\draw[ -triangle 90](0,0)--(5,0);
+	\draw(2,0)--(2,1);
+	\draw [fill=black] (2.,1.) circle (2.0pt);
+	%%%%%soluzioni
+	%%%sinistra	
+	\draw[dashed](2,1)--(5,1);
+	%%destra
+	\draw(2,1)--(0,1);
+	\node at (2,-0.5) {1};
+	\end{tikzpicture}
+	\captionsetup{format=grafico,list=no}
+	\caption[]{Disequazione\nobs\vref{equ:PrimoGradoDisequazione1}}
+	\label{fig:esempioDisequazioniPgradografico2}
+\end{figure}
 \section{Disequazioni di secondo grado}
 \section{Disequazioni fratte}
 \section{Disequazioni di grado superiore al secondo}
