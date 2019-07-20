@@ -73,6 +73,7 @@ Il procedimento è  quello della risoluzione di un'equazione di primo grado, si 
 		\item Si mette sotto di essa la soluzione trovata.
 		\item In corrispondenza della soluzione si traccia un segmento verticale.
 		\item Si guarda la soluzione e dalla parte superiore del segmento si traccia una semiretta continua nella direzione della freccia e una semiretta tratteggiata dal lato opposto.
+		\item Poniamo un pallino vuoto se nella diseguaglianza \textbf{non} compare il segno di uguaglianza, un pallino pieno altrimenti.
 	\end{enumerate}
 \end{procedurat}
 \begin{figure}
@@ -80,6 +81,7 @@ Il procedimento è  quello della risoluzione di un'equazione di primo grado, si 
 	\begin{tikzpicture}
 	\draw[ -triangle 90](0,0)--(5,0);
 	\draw(2,0)--(2,1);
+	\draw [fill=black] (2.,1.) circle (2.0pt);
 	%%%%%soluzioni
 	%%%sinistra	
 	\draw[dashed](2,1)--(5,1);
@@ -118,6 +120,7 @@ procediamo come nella figura\nobs\vref{fig:esempioDisequazioniPgrado2}
 	\caption{Risoluzione disequazione\nobs\vref{equ:PrimoGradoDisequazione1}}
 	\label{fig:esempioDisequazioniPgrado2}
 \end{figure}
+Anche in questo caso otteniamo un grafico simile al precedente.
 \section{Disequazioni di secondo grado}
 \section{Disequazioni fratte}
 \section{Disequazioni di grado superiore al secondo}
