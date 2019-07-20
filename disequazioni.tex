@@ -32,6 +32,71 @@ Iniziamo con un po' di vocabolario. La tabella~\vref{tab:disuguaglianze} mostra 
 	\end{aligned}\right .   
 	\end{equation}
 \end{definizionet}
+\subsection{Risolvere una disequazione di primo grado}
+Per risolvere una disequazione bisogna avere chiaro cosa si intende per soluzione\index{Disequazione!soluzione}
+\begin{definizionet}{Soluzione}{}
+	Una soluzione\index{Disequazione!soluzione} per una disequazione è un valore che sostituito all'incognita rende vera la disuguaglianza
+\end{definizionet}
+
+La definizione sembra simile a quella per le equazioni. Per un'equazione abbiamo: <<una soluzione è quel valore che rende vera l'uguaglianza>>\par
+La somiglianza è solo apparente, infatti per un'equazione di primo grado in un incognita, la soluzione è un valore, per una disequazione la soluzione è un intervallo. Per esempio la disequazione elementare$X>1$ ha per soluzione tutti i numeri che sono maggiori di uno cioè l'intervallo $]1 +\infty [$.\par
+Il metodo per risolvere una disequazione di primo è simile a quello per utilizzato con una equazione di pari grado, cioè la separazione delle variabili\index{Separazione!variabili}.\par Un esempio è il seguente. Supponiamo di dover risolvere 
+\begin{esempiot}{Disequazione di primo grado}{}
+	\begin{equation}
+	3x+5<2x+6\label{equ:PrimoGradoDisequazione1}
+	\end{equation}
+\end{esempiot}
+procediamo come nella figura\nobs\vref{fig:esempioDisequazioniPgrado1}
+\begin{figure}
+	\begin{NodesList}
+		\centering
+		\begin{align*}
+		3x+5<&2x+6\AddNode\\[.5cm] 
+		3x+5-2x<&6\AddNode\\[.5cm] %\AddNode[2]\\ 
+		3x-2x<&6-5\AddNode\\
+		x<&1\AddNode
+		\end{align*}
+		\LinkNodes[margin=6cm]{\begin{minipage}[h]{5cm}
+				Sposto $2x$ a sinistra e cambio di segno
+		\end{minipage}}
+		%\LinkNodes{Sposto $2x$ a sinistra e cambio di segno}%
+		\LinkNodes[margin=6cm]{\begin{minipage}[h]{5cm}
+				Sposto $+5$ a destra e cambio di segno
+		\end{minipage}}%
+		\LinkNodes[margin=6cm]{\begin{minipage}[h]{5cm}
+				Sommo
+		\end{minipage}}%
+	\end{NodesList}
+	\captionsetup{format=esempio,list=no}
+	\caption{Risoluzione disequazione\nobs\vref{equ:PrimoGradoDisequazione1}}
+	\label{fig:esempioDisequazioniPgrado1}
+\end{figure}
+
+Il procedimento è  quello della risoluzione di un'equazione di primo grado, si trasportano a sinistra i valori con l'incognita, a destra i numeri, vale la stessa regola che si usa per le equazioni: spostando i termini rispettto al verso, si cambia di segno. Per rappresentare la soluzione si usa un metodo grafico che rappresenta le soluzioni. Il grafico dell'esempio è la figura\nobs\vref{fig:esempioDisequazioniPgradografico1}. Per disegnare il grafico della soluzione si procede in questa maniera: 
+\begin{procedurat}{}{}
+	\begin{enumerate}
+		\item si traccia una linea orizzontale orientata, l'asse dei numeri.
+		\item si mette sotto di essa la soluzione trovata.
+		\item in corrispondenza della soluzione si traccia un segmento verticale.
+		\item  si guarda la soluzione e dalla parte superiore del segmento si traccia una semiretta continua nella direzione della freccia e una semiretta tratteggiata dal lato opposto.
+	\end{enumerate}
+\end{procedurat}
+\begin{figure}
+	\centering
+	\begin{tikzpicture}
+	\draw[ -triangle 90](0,0)--(5,0);
+	\draw(2,0)--(2,1);
+	%%%%%soluzioni
+	%%%sinistra	
+	\draw[dashed](2,1)--(5,1);
+	%%destra
+	\draw(2,1)--(0,1);
+	\node at (2,-0.5) {1};
+	\end{tikzpicture}
+	\captionsetup{format=grafico,list=no}
+	\caption[]{Disequazione\nobs\vref{equ:PrimoGradoDisequazione1}}
+	\label{fig:esempioDisequazioniPgradografico1}
+\end{figure}
 \section{Disequazioni di secondo grado}
 \section{Disequazioni fratte}
 \section{Disequazioni di grado superiore al secondo}
