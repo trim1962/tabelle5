@@ -7,10 +7,9 @@
 \usepackage[debug]{fp}
 \newcommand{\xunodueE}[3]{
 \FPset\meno{-1}
-\FPeval{mb}{\meno * #2}
+\FPeval{mb}{\meno * ##2}
 \FPifint\mb
 	\dfrac{\mb\pm\sqrt{(#2)^2-4(#1)(#3)}}{2(#1)}
-	 \FPupn
 }
 \usepackage{tabelle}
 \DeclareCaptionFormat{grafico}{\textbf{Grafico \thefigure}#2#3}
