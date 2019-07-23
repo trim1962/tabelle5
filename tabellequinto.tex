@@ -4,6 +4,11 @@
 \usepackage{grafica}
 \usepackage{stand_class}
 \usepackage{matematica}
+\usepackage{fp}
+\newcommand{\xunodueE}[3]{
+\FPeval{mb}{-1*#2}
+	\dfrac{\mb\pm\sqrt{(#2)^2-4(#1)(#3)}}{2(#1)}
+}
 \usepackage{tabelle}
 \DeclareCaptionFormat{grafico}{\textbf{Grafico \thefigure}#2#3}
 \DeclareCaptionFormat{esempio}{\textbf{Esempio \thefigure}#2#3}
