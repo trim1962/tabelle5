@@ -6,7 +6,7 @@
 \usepackage{matematica}
 \usepackage{fp}
 \newcommand{\xunodueE}[3]{
-\FPeval{mb}{-1 * #2}
+\FPeval{mb}{{-1} * #2}
 \FPifint\mb
 	\dfrac{\mb\pm\sqrt{(#2)^2-4(#1)(#3)}}{2(#1)}
 }
