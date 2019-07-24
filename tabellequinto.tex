@@ -59,6 +59,25 @@
 	\FPround\deltas{\deltas}{0}
 	\FPround\duea{\duea}{0}
 	\dfrac{\menob\pm\sqrt{\deltas}}{\duea}}
+\newcommand{\xunodueDeltaS}[3]{
+	\FPset\ca{#1}
+	\FPset\cb{#2}
+	\FPset\cc{#3}
+	%b^2
+	\FPmul\bquad\cb\cb
+	%2a
+	\FPadd\duea\ca\ca
+	%2ac
+	\FPmul\qac\duea\cc
+	%4ac
+	\FPadd\qac\qac\qac%
+	%-4ac
+	\FPneg\mqac\qac
+	%b^2-4ac
+	\FPadd\deltas\bquad\mqac
+	\FPround\deltas{\deltas}{0}
+	\Delta=\deltas
+}
 \usepackage{tabelle}
 \DeclareCaptionFormat{grafico}{\textbf{Grafico \thefigure}#2#3}
 \DeclareCaptionFormat{esempio}{\textbf{Esempio \thefigure}#2#3}
