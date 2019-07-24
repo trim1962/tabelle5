@@ -5,6 +5,12 @@
 \usepackage{stand_class}
 \usepackage{matematica}
 %\usepackage{fp}
+\newcommand{\CDpm}[1]{
+	\ifnum #1>0
+	+#1\else
+	#1
+	\fi
+}
 \newcommand{\xunodueE}[3]{
 	\FPset\ca{#1}
 	\FPset\cb{#2}
