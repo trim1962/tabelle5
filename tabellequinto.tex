@@ -36,6 +36,29 @@
 	\FPeval\xtwo{clip(round(xtwo:4))}%
 	x_1=\xone\quad x_2=\xtwo
 }
+\newcommand{\xunodueEE}[3]{
+	\FPset\ca{#1}
+	\FPset\cb{#2}
+	\FPset\cc{#3}
+	%-b
+	\FPneg\menob\cb
+	%b^2
+	\FPmul\bquad\cb\cb
+	%2a
+	\FPadd\duea\ca\ca%
+	%2ac
+	\FPmul\qac\duea\cc 
+	%4ac
+	\FPadd\qac\qac\qac%
+	%-4ac
+	\FPneg\mqac\qac
+	%b^2-4ac
+	\FPadd\deltas\bquad\mqac
+	\FPround\bquad{\bquad}{0}
+	\FPround\menob{\menob}{0}
+	\FPround\deltas{\deltas}{0}
+	\FPround\duea{\duea}{0}
+	\dfrac{\menob\pm\sqrt{\deltas}}{\duea}}
 \usepackage{tabelle}
 \DeclareCaptionFormat{grafico}{\textbf{Grafico \thefigure}#2#3}
 \DeclareCaptionFormat{esempio}{\textbf{Esempio \thefigure}#2#3}
