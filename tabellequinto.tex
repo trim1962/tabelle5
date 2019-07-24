@@ -6,8 +6,29 @@
 \usepackage{matematica}
 %\usepackage{fp}
 \newcommand{\xunodueE}[3]{
-\FPneg\mb#2
-	\dfrac{\mb\pm\sqrt{(#2)^2-4(#1)(#3)}}{2(#1)}
+	\FPset\ca{#1}
+	\FPset\cb{#2}
+	\FPset\cc{#3}
+	\FPneg\menob\cb
+	\FPround\menob{\menob}{0}
+	\FPeval\bquad{abs(\cb) * abs(\cb)}
+	\FPround\bquad{\bquad}{0}
+	%\FPeval\qac{4*(\ca*\cc)}
+	\FPadd\duea\ca\ca%
+	\FPmul\qac\duea\cc 
+	\FPadd\qac\qac\qac%
+	\FPneg\mqac\qac
+	\FPround\mqac{\mqac}{0}
+	\FPround\duea{\duea}{0}
+	\dfrac{\menob\pm\sqrt{\bquad\CDpm{\mqac}}}{\duea}}
+\newcommand{\xunodueS}[3]{
+	\FPset\ca{#1}
+	\FPset\cb{#2}
+	\FPset\cc{#3}
+	\FPqsolve\xone\xtwo\ca\cb\cc
+	\FPeval\xone{clip(round(xone:4))}%
+	\FPeval\xtwo{clip(round(xtwo:4))}%
+	x_1=\xone\quad x_2=\xtwo
 }
 \usepackage{tabelle}
 \DeclareCaptionFormat{grafico}{\textbf{Grafico \thefigure}#2#3}
