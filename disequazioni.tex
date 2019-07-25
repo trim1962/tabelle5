@@ -343,5 +343,42 @@ Fine
 	
 	Fine
 \end{esempiot}
+\begin{esempiot}{Delta minore di zero, a negativa}{}
+	\begin{NodesList}[margin=4.0cm]
+		\centering
+		\begin{flalign*}
+		\quadratic{-1}{3}{-4}<& 0\AddNode&\\[.5cm] 
+		\quadratic{-1}{3}{-4}= &0\AddNode&\\[.5cm] %\AddNode[2]\\ 
+		x_{1,2}=&\xunodue{-1}{3}{-4}\AddNode&\\
+		x_{1,2}=&\xunodueE{-1}{3}{-4}\AddNode&\\
+		x_{1,2}=&\xunodueEE{-1}{3}{-4}\AddNode&\\
+		\text{Nessuna soluzione}\AddNode&\\
+		\end{flalign*}
+		\tikzset{LabelStyle/.style = {right=0.1cm,pos=0.5,text=red,fill=white}}
+		\LinkNodes{Risolvo l'equazione}
+		\LinkNodes{Ottengo}%
+		\LinkNodes{Semplifico}%
+		\LinkNodes{Semplifico}%
+		\LinkNodes{Non ha soluzioni reali}%
+	\end{NodesList}
+	Dobbiamo costruire il grafico. Dato che:
+	\begin{enumerate}
+		\item $a=-<0$
+		\item $\xunodueDeltaS{1}{3}{4}<0$
+	\end{enumerate}
+	Quindi il grafico corrispondente è:
+	\begin{center}
+		\includestandalone{DisGrafici/DeltaMinoreZeroAmaggioreDizero}
+		\captionof{figure}{Delta minore di zero a maggiore di zero}
+	\end{center}\index{Delta minore di zero!a maggiore di zero}
+	Quindi otteniamo
+	\begin{center}
+		\includestandalone{DisGrafici/DeltaMinoreZeroAmaggioreDizero1}
+	\end{center}
+	Ricapitolando dobbiamo risolvere la disequazione \[ \quadratic{1}{1}{1}\geq 0\]
+	Dato che non vi sono soluzioni non vi sono tratti verticali. Il grafico è sempre positivo ma mai uguale a zero.
+	
+	Fine
+\end{esempiot}
 \section{Disequazioni di grado superiore al secondo}
 \section{Sistemi di disequazioni intere e fratte}
