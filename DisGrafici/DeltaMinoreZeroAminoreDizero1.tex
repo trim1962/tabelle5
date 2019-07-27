@@ -1,0 +1,11 @@
+% Tikz File 'mytikz.tex'
+\documentclass{standalone}
+\usepackage{CDgrafici}
+\begin{document}
+	\begin{tikzpicture}[line cap=round,line join=round,x=1.0cm,y=1.0cm]
+	\draw[-Latex,color=black] (-3,0) -- (3,0);
+	\clip(-3,-0.5) rectangle (3,1);
+	\draw [dash pattern=on 5pt off 5pt](-3,0.5) -- (3,0.5);
+	\end{tikzpicture}
+
+\end{document}
